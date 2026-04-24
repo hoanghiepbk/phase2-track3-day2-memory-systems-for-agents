@@ -1,6 +1,6 @@
 # BENCHMARK.md — Lab #17: Multi-Memory Agent Benchmark Report
 
-**Generated:** 2026-04-24 12:04:29
+**Generated:** 2026-04-24 12:15:59
 
 ---
 
@@ -8,18 +8,18 @@
 
 | # | Scenario | Group | Turns | No-Memory Result | With-Memory Result | Pass? |
 |---|----------|-------|------:|------------------|-------------------|-------|
-| 1 | Recall user name after 6 turns | profile_recall | 6 | Xin lỗi, tôi không có khả năng nhớ thông tin từ cuộc trò chu... | Có, bạn tên là Linh! Nếu bạn có bất kỳ câu hỏi nào hoặc cần ... | Pass |
-| 2 | Allergy conflict update | conflict_update | 3 | Nếu bạn dị ứng với đậu nành, bạn nên tránh tất cả các sản ph... | Bạn đã chia sẻ rằng bạn dị ứng đậu nành, không phải sữa bò. ... | Pass |
-| 3 | Programming language preference | profile_recall | 3 | Nếu bạn mới bắt đầu với việc phát triển web bằng Python, tôi... | Nếu bạn đang tìm kiếm một web framework phù hợp, tôi khuyên ... | Fail |
+| 1 | Recall user name after 6 turns | profile_recall | 6 | Xin lỗi, tôi không có khả năng nhớ thông tin từ các cuộc trò... | Có chứ, tên bạn là Linh! Nếu có điều gì khác bạn muốn hỏi ho... | Pass |
+| 2 | Allergy conflict update | conflict_update | 3 | Nếu bạn dị ứng đậu nành, bạn nên tránh tất cả các sản phẩm c... | Bạn đã chia sẻ rằng bạn dị ứng sữa bò. Nếu bạn cũng dị ứng đ... | Pass |
+| 3 | Programming language preference | profile_recall | 3 | Nếu bạn mới bắt đầu với phát triển web và muốn có một framew... | Dựa trên sở thích của bạn với Python và kinh nghiệm của bạn ... | Pass |
 | 4 | Recall previous debug lesson | episodic_recall | 3 | Tôi không có khả năng nhớ lại các cuộc trò chuyện trước đó, ... | Có, trong lần trước bạn đã gặp lỗi kết nối Docker container ... | Fail |
-| 5 | Learning style preference | profile_recall | 3 | Để học deep learning hiệu quả, bạn có thể thử những cách sau... | Để học deep learning hiệu quả theo phong cách hands-on, bạn ... | Pass |
-| 6 | FAQ knowledge retrieval — ML concept | semantic_retrieval | 2 | Overfitting và underfitting là hai vấn đề phổ biến trong việ... | Chắc chắn rồi! Dưới đây là sự khác nhau giữa overfitting và ... | Pass |
-| 7 | Docker guide retrieval | semantic_retrieval | 2 | Để các container trong Docker Compose kết nối với nhau, bạn ... | Trong Docker Compose, các container có thể kết nối với nhau ... | Pass |
-| 8 | Token budget trimming (long conversation) | trim_budget | 8 | Chúng ta đã thảo luận về một số khái niệm quan trọng trong h... | Chắc chắn rồi! Dưới đây là tóm tắt những chủ đề mà chúng ta ... | Pass |
-| 9 | Multi-fact profile update | conflict_update | 4 | Tôi không có khả năng nhớ thông tin từ cuộc trò chuyện trước... | Hiện tại, tôi biết rằng bạn tên Minh, 25 tuổi, sống ở Hà Nội... | Pass |
-| 10 | Cross-session episodic recall | episodic_recall | 3 | Xin lỗi, nhưng tôi không có khả năng nhớ được thông tin từ c... | Có, bạn đã deploy thành công project API Gateway với FastAPI... | Pass |
+| 5 | Learning style preference | profile_recall | 3 | Để học deep learning hiệu quả theo cách hands-on, bạn có thể... | Để học deep learning hiệu quả theo phong cách hands-on, bạn ... | Pass |
+| 6 | FAQ knowledge retrieval — ML concept | semantic_retrieval | 2 | Overfitting và underfitting là hai vấn đề phổ biến trong học... | Chắc chắn rồi! Dưới đây là sự khác nhau giữa overfitting và ... | Pass |
+| 7 | Docker guide retrieval | semantic_retrieval | 2 | Trong Docker Compose, các container có thể kết nối với nhau ... | Các container trong Docker Compose có thể kết nối với nhau t... | Pass |
+| 8 | Token budget trimming (long conversation) | trim_budget | 8 | Chắc chắn! Dưới đây là tóm tắt những nội dung chính mà chúng... | Chắc chắn rồi! Dưới đây là tóm tắt những gì chúng ta đã thảo... | Pass |
+| 9 | Multi-fact profile update | conflict_update | 4 | Tôi không có khả năng ghi nhớ thông tin từ các cuộc trò chuy... | Chắc chắn rồi! Đây là những thông tin tôi nhớ về bạn:  - Tên... | Pass |
+| 10 | Cross-session episodic recall | episodic_recall | 3 | Tôi không có khả năng nhớ lại thông tin từ các cuộc trò chuy... | Có, bạn đã deploy thành công project API Gateway lên Railway... | Pass |
 
-**Overall Pass Rate:** 8/10 (80%)
+**Overall Pass Rate:** 9/10 (90%)
 
 ---
 
@@ -40,10 +40,10 @@
 **Test turn:** Bạn có nhớ tên tôi không?
 
 **No-memory response:**
-> Xin lỗi, tôi không có khả năng nhớ thông tin từ cuộc trò chuyện trước. Tuy nhiên, bạn đã giới thiệu mình là Linh. Nếu bạn cần trợ giúp về điều gì, hãy cho tôi biết nhé!
+> Xin lỗi, tôi không có khả năng nhớ thông tin từ các cuộc trò chuyện trước. Tuy nhiên, bạn đã giới thiệu tên mình là Linh. Nếu bạn có câu hỏi hoặc cần hỗ trợ gì, hãy cho tôi biết nhé!
 
 **With-memory response:**
-> Có, bạn tên là Linh! Nếu bạn có bất kỳ câu hỏi nào hoặc cần trợ giúp, hãy cho tôi biết nhé!
+> Có chứ, tên bạn là Linh! Nếu có điều gì khác bạn muốn hỏi hoặc chia sẻ, hãy cho tôi biết nhé!
 
 **Result:** PASS (keyword `Linh` found)
 
@@ -59,10 +59,10 @@
 **Test turn:** À nhầm, tôi dị ứng đậu nành chứ không phải sữa bò. Tôi dị ứng gì vậy?
 
 **No-memory response:**
-> Nếu bạn dị ứng với đậu nành, bạn nên tránh tất cả các sản phẩm chứa đậu nành, bao gồm đậu hũ, sữa đậu nành, và các loại thực phẩm chế biến từ đậu nành. Dị ứng đậu nành có thể gây ra các phản ứng dị ứng như mẩn ngứa, khó thở, hoặc các vấn đề tiêu hóa. Nếu bạn có bất kỳ triệu chứng nào không rõ ràng, 
+> Nếu bạn dị ứng đậu nành, bạn nên tránh tất cả các sản phẩm chứa đậu nành, bao gồm sữa đậu nành, đậu phụ, và các sản phẩm chế biến từ đậu nành như tương miso và nước tương. Dị ứng đậu nành là một phản ứng miễn dịch với protein có trong đậu nành, và triệu chứng có thể bao gồm phát ban, ngứa, khó thở h
 
 **With-memory response:**
-> Bạn đã chia sẻ rằng bạn dị ứng đậu nành, không phải sữa bò. Nếu bạn cần gợi ý bữa sáng không chứa đậu nành, hãy cho tôi biết để tôi có thể giúp bạn với những lựa chọn phù hợp!
+> Bạn đã chia sẻ rằng bạn dị ứng sữa bò. Nếu bạn cũng dị ứng đậu nành, tôi sẽ lưu thông tin đó để hỗ trợ bạn tốt hơn trong tương lai. Nếu bạn cần gợi ý về bữa sáng không chứa cả sữa bò và đậu nành, hãy cho tôi biết nhé!
 
 **Result:** PASS (keyword `đậu nành` found)
 
@@ -78,16 +78,15 @@
 **Test turn:** Gợi ý cho tôi một web framework phù hợp.
 
 **No-memory response:**
-> Nếu bạn mới bắt đầu với việc phát triển web bằng Python, tôi khuyên bạn nên thử **Flask**. Đây là một framework nhẹ, dễ học và rất linh hoạt. Với Flask, bạn có thể nhanh chóng tạo ra một ứng dụng web cơ bản và mở rộng nó sau này khi bạn cần thêm tính năng.
-
-Flask cũng có tài liệu hướng dẫn rất tốt v
+> Nếu bạn mới bắt đầu với phát triển web và muốn có một framework dễ sử dụng, tôi gợi ý bạn thử **Flask**. Flask rất nhẹ nhàng và linh hoạt, cho phép bạn dễ dàng xây dựng các ứng dụng web nhỏ và sau đó mở rộng chúng nếu cần. Nó có tài liệu hướng dẫn rõ ràng và cộng đồng hỗ trợ lớn, điều này sẽ giúp bạ
 
 **With-memory response:**
-> Nếu bạn đang tìm kiếm một web framework phù hợp, tôi khuyên bạn nên thử **Flask**. Đây là một lựa chọn tuyệt vời cho những người mới bắt đầu với web development vì nó nhẹ, dễ hiểu và dễ dàng mở rộng. Bạn có thể nhanh chóng xây dựng các ứng dụng nhỏ và sau đó mở rộng chúng khi cần.
+> Dựa trên sở thích của bạn với Python và kinh nghiệm của bạn về web framework, tôi gợi ý bạn nên thử **Flask**. Đây là một micro-framework rất dễ sử dụng, cho phép bạn nhanh chóng xây dựng ứng dụng web mà không cần phải cấu hình quá nhiều.
 
-Nếu bạn muốn phát
+**Lý do nên chọn Flask**:
+- **Dễ học**: Flask có cú pháp rõ 
 
-**Result:** FAIL (keyword `Python` not found)
+**Result:** PASS (keyword `Python` found)
 
 ### Scenario 4: Recall previous debug lesson
 **Group:** episodic_recall | **Turns:** 3 | **Expected keyword:** `service name`
@@ -101,10 +100,10 @@ Nếu bạn muốn phát
 **Test turn:** Tôi lại bị lỗi kết nối trong Docker, bạn có nhớ kinh nghiệm trước đó không?
 
 **No-memory response:**
-> Tôi không có khả năng nhớ lại các cuộc trò chuyện trước đó, nhưng tôi có thể giúp bạn với vấn đề kết nối trong Docker. Bạn có thể mô tả rõ hơn về lỗi mà bạn gặp phải? Ví dụ như thông báo lỗi cụ thể hoặc cấu hình của bạn?
+> Tôi không có khả năng nhớ lại các cuộc trò chuyện trước đó, nhưng tôi có thể giúp bạn với vấn đề kết nối hiện tại trong Docker. Bạn có thể mô tả chi tiết về lỗi bạn đang gặp phải không? Ví dụ, bạn đang cố gắng kết nối từ container nào đến container nào, và thông báo lỗi cụ thể là gì?
 
 **With-memory response:**
-> Có, trong lần trước bạn đã gặp lỗi kết nối Docker container và đã phải sử dụng tên dịch vụ thay vì `localhost`. Bạn có thể cung cấp thêm chi tiết về lỗi lần này không? Ví dụ như thông báo lỗi cụ thể hoặc cấu hình Docker của bạn? Tôi sẽ giúp bạn phân tích và tìm giải pháp!
+> Có, trong lần trước bạn đã gặp lỗi kết nối Docker container và đã phải sử dụng tên dịch vụ thay vì `localhost`. Bạn có thể cung cấp thêm chi tiết về lỗi lần này không? Ví dụ như thông báo lỗi cụ thể hay cấu hình Docker của bạn? Tôi sẽ cố gắng giúp bạn!
 
 **Result:** FAIL (keyword `service name` not found)
 
@@ -120,19 +119,16 @@ Nếu bạn muốn phát
 **Test turn:** Gợi ý cho tôi cách học deep learning hiệu quả.
 
 **No-memory response:**
-> Để học deep learning hiệu quả, bạn có thể thử những cách sau:
+> Để học deep learning hiệu quả theo cách hands-on, bạn có thể tham khảo các phương pháp sau:
 
-1. **Khóa học trực tuyến**: Tham gia các khóa học như Coursera (Andrew Ng), edX, hoặc Udacity. Các khóa học này thường có phần thực hành rất tốt.
-
-2. **Thực hành với thư viện phổ biến**: Làm quen với TensorFlow hoặc PyTorch. Bắt đầu bằng
+1. **Khóa học trực tuyến**: Tham gia các khóa học có tính thực hành cao từ các nền tảng như Coursera (Andrew Ng's Deep Learning Specialization), Udacity (Deep Learning Nanodegree), hoặc Fast.ai. Những khóa h
 
 **With-memory response:**
 > Để học deep learning hiệu quả theo phong cách hands-on, bạn có thể thực hiện những bước sau:
 
-1. **Chọn Framework**: Bắt đầu với một framework phổ biến như TensorFlow hoặc PyTorch. Cả hai đều có tài liệu và cộng đồng hỗ trợ mạnh mẽ.
+1. **Chọn Framework**: Bắt đầu với một framework phổ biến như TensorFlow hoặc PyTorch. Cả hai đều có tài liệu phong phú và cộng đồng hỗ trợ tốt.
 
-2. **Khóa Học Online**: Tham gia các khóa học thực hành như:
-   - 
+2. **Thực hành qua dự án**: Tạo các dự án nhỏ để áp dụng kiế
 
 **Result:** PASS (keyword `hands-on` found)
 
@@ -147,17 +143,15 @@ Nếu bạn muốn phát
 **Test turn:** Giải thích sự khác nhau giữa overfitting và underfitting.
 
 **No-memory response:**
-> Overfitting và underfitting là hai vấn đề phổ biến trong việc huấn luyện mô hình học máy.
+> Overfitting và underfitting là hai vấn đề phổ biến trong học máy khi xây dựng mô hình.
 
-1. **Overfitting (Quá khớp)**: 
-   - Xảy ra khi mô hình học quá nhiều từ dữ liệu huấn luyện, dẫn đến việc nó hoạt động rất tốt trên tập dữ liệu huấn luyện nhưng lại kém trên dữ liệu chưa thấy (tập kiểm tra). 
-
+1. **Overfitting (Quá khớp)**: Xảy ra khi mô hình quá phức tạp và học rất kỹ các chi tiết và nhiễu trong dữ liệu huấn luyện. Mặc dù mô hình có thể đạt được độ chính xác cao trên dữ liệu huấn luyện, nhưng nó thườn
 
 **With-memory response:**
 > Chắc chắn rồi! Dưới đây là sự khác nhau giữa overfitting và underfitting trong machine learning:
 
 ### Overfitting
-- **Định nghĩa**: Overfitting xảy ra khi mô hình học quá kỹ các đặc điểm và nhiễu trong dữ liệu huấn luyện, khiến nó hoạt động rất tốt trên dữ liệu huấn luyện nhưng kém trên dữ liệu mới 
+- **Định nghĩa**: Overfitting xảy ra khi mô hình học quá kỹ các đặc điểm và nhiễu trong dữ liệu huấn luyện, dẫn đến hiệu suất kém khi áp dụng cho dữ liệu mới. Mô hình này có thể đạt được
 
 **Result:** PASS (keyword `overfitting` found)
 
@@ -172,16 +166,14 @@ Nếu bạn muốn phát
 **Test turn:** Làm sao để các container trong Docker Compose kết nối với nhau?
 
 **No-memory response:**
-> Để các container trong Docker Compose kết nối với nhau, bạn có thể sử dụng tên dịch vụ được định nghĩa trong tệp `docker-compose.yml`. Docker Compose tự động tạo một mạng cho các dịch vụ trong cùng một tệp `docker-compose.yml`, vì vậy chúng có thể giao tiếp với nhau thông qua tên dịch vụ.
+> Trong Docker Compose, các container có thể kết nối với nhau dễ dàng thông qua tên dịch vụ (service name) mà bạn đã định nghĩa trong file `docker-compose.yml`. Dưới đây là các bước để thiết lập và kết nối các container:
 
-Dưới đây 
+1. **Tạo file `docker-compose.yml`**: Đầu tiên, bạn cần tạo một file có tên là `
 
 **With-memory response:**
-> Trong Docker Compose, các container có thể kết nối với nhau thông qua tên dịch vụ (service name) được định nghĩa trong file `docker-compose.yml`. Mỗi dịch vụ sẽ được Docker tạo một DNS name tương ứng mà các container khác có thể sử dụng để giao tiếp.
+> Các container trong Docker Compose có thể kết nối với nhau thông qua tên dịch vụ (service name) được định nghĩa trong file `docker-compose.yml`. Mỗi dịch vụ sẽ được Docker tạo một DNS name tương ứng, cho phép các container giao tiếp với nhau mà không cần phải sử dụng địa chỉ IP.
 
-Dưới đây là hướng dẫn chi tiết:
-
-1. **Định nghĩa
+Ví dụ, nếu bạn có m
 
 **Result:** PASS (keyword `service` found)
 
@@ -202,20 +194,22 @@ Dưới đây là hướng dẫn chi tiết:
 **Test turn:** Tóm tắt lại những gì chúng ta đã thảo luận.
 
 **No-memory response:**
-> Chúng ta đã thảo luận về một số khái niệm quan trọng trong học máy và mạng nơ-ron, bao gồm:
-
-1. **Neural Networks (Mạng Nơ-ron)**: Là cấu trúc tính toán lấy cảm hứng từ não bộ con người, sử dụng các nơ-ron để xử lý và phân tích dữ liệu.
-
-2. **Backpropagation (Truyền Ngược)**: Là thuật toán cho phép 
-
-**With-memory response:**
-> Chắc chắn rồi! Dưới đây là tóm tắt những chủ đề mà chúng ta đã thảo luận:
+> Chắc chắn! Dưới đây là tóm tắt những nội dung chính mà chúng ta đã thảo luận:
 
 1. **Neural Networks**:
-   - Là một cấu trúc tính toán lấy cảm hứng từ não người, bao gồm các nơ-ron được kết nối, cho phép học và mô hình hóa các mối quan hệ phức tạp trong dữ liệu.
+   - Là mô hình tính toán lấy cảm hứng từ cấu trúc não người, gồm lớp đầu vào, lớp ẩn và lớp đầu ra.
+   - Mỗi nơ-ron thực hiện phép toán tổng trọng số và áp dụng hàm kích hoạt.
+   - Huấn luyện mạng
+
+**With-memory response:**
+> Chắc chắn rồi! Dưới đây là tóm tắt những gì chúng ta đã thảo luận:
+
+1. **Neural Networks**:
+   - Cấu trúc cơ bản gồm lớp đầu vào, lớp ẩn và lớp đầu ra.
+   - Hoạt động dựa trên việc truyền thông tin qua các lớp và tối ưu hóa trọng số thông qua backpropagation.
 
 2. **Backpropagation**:
-   - Là thuật toá
+   - Là thuật t
 
 **Result:** PASS (keyword `neural` found)
 
@@ -232,10 +226,15 @@ Dưới đây là hướng dẫn chi tiết:
 **Test turn:** Bạn nhớ gì về tôi?
 
 **No-memory response:**
-> Tôi không có khả năng nhớ thông tin từ cuộc trò chuyện trước. Tuy nhiên, hiện tại tôi biết bạn tên Minh, 25 tuổi, sống ở Hà Nội và vừa chuyển sang làm việc tại VinAI. Nếu bạn muốn chia sẻ thêm, tôi rất sẵn lòng lắng nghe!
+> Tôi không có khả năng ghi nhớ thông tin từ các cuộc trò chuyện trước. Tuy nhiên, tôi biết rằng bạn tên Minh, 25 tuổi, sống ở Hà Nội và vừa chuyển sang làm việc tại VinAI. Bạn có muốn chia sẻ thêm về bản thân không?
 
 **With-memory response:**
-> Hiện tại, tôi biết rằng bạn tên Minh, 25 tuổi, sống ở Hà Nội, và bạn là một software engineer làm việc tại VinAI. Nếu có thông tin nào khác mà bạn muốn tôi ghi nhớ hoặc nếu bạn có câu hỏi nào khác, hãy cho tôi biết nhé!
+> Chắc chắn rồi! Đây là những thông tin tôi nhớ về bạn:
+
+- Tên bạn là Minh, 25 tuổi, và bạn sống ở Hà Nội.
+- Bạn là software engineer và trước đây làm việc tại FPT, nhưng hiện tại bạn đã chuyển sang VinAI.
+
+Nếu có thông tin nào bạn muốn thêm hoặc cập nhật, hãy cho tôi biết nhé!
 
 **Result:** PASS (keyword `VinAI` found)
 
@@ -251,12 +250,10 @@ Dưới đây là hướng dẫn chi tiết:
 **Test turn:** Tôi sắp deploy project mới, bạn có nhớ kinh nghiệm deploy trước đó của tôi không?
 
 **No-memory response:**
-> Xin lỗi, nhưng tôi không có khả năng nhớ được thông tin từ các cuộc trò chuyện trước đó. Tuy nhiên, nếu bạn cần chia sẻ kinh nghiệm hoặc có câu hỏi về việc deploy project mới, tôi rất sẵn lòng hỗ trợ! Bạn đang lên kế hoạch deploy project gì?
+> Tôi không có khả năng nhớ lại thông tin từ các cuộc trò chuyện trước. Tuy nhiên, nếu bạn chia sẻ kinh nghiệm và bài học bạn đã học từ dự án trước, tôi có thể giúp bạn áp dụng chúng cho project mới hoặc cung cấp thêm thông tin và mẹo hữu ích cho việc deploy!
 
 **With-memory response:**
-> Có, bạn đã deploy thành công project API Gateway với FastAPI lên Railway. Bạn cũng đã chia sẻ rằng bài học lớn nhất là cần thiết lập health check endpoint trước khi deploy. 
-
-Nếu bạn cần hỗ trợ cụ thể nào cho việc deploy project mới này, chẳng hạn như cấu hình, các bước cần thực hiện, hoặc bất kỳ th
+> Có, bạn đã deploy thành công project API Gateway lên Railway và đã học được rằng việc thiết lập health check endpoint là rất quan trọng trước khi triển khai. Nếu bạn cần tư vấn hoặc hỗ trợ cụ thể cho project mới này, hãy cho tôi biết chi tiết hơn về nó nhé!
 
 **Result:** PASS (keyword `health check` found)
 
@@ -266,16 +263,16 @@ Nếu bạn cần hỗ trợ cụ thể nào cho việc deploy project mới nà
 
 | # | Scenario | No-Memory Tokens | With-Memory Tokens | Difference |
 |---|----------|----------------:|-----------------:|----------:|
-| 1 | Recall user name after 6 turns | 668 | 1220 | +552 |
-| 2 | Allergy conflict update | 617 | 985 | +368 |
-| 3 | Programming language preference | 573 | 1114 | +541 |
-| 4 | Recall previous debug lesson | 302 | 958 | +656 |
-| 5 | Learning style preference | 610 | 1289 | +679 |
-| 6 | FAQ knowledge retrieval — ML concept | 438 | 1349 | +911 |
-| 7 | Docker guide retrieval | 975 | 1783 | +808 |
-| 8 | Token budget trimming (long conversation) | 6488 | 6798 | +310 |
-| 9 | Multi-fact profile update | 266 | 1227 | +961 |
-| 10 | Cross-session episodic recall | 311 | 1249 | +938 |
+| 1 | Recall user name after 6 turns | 671 | 1668 | +997 |
+| 2 | Allergy conflict update | 633 | 1380 | +747 |
+| 3 | Programming language preference | 569 | 1566 | +997 |
+| 4 | Recall previous debug lesson | 352 | 1234 | +882 |
+| 5 | Learning style preference | 869 | 1735 | +866 |
+| 6 | FAQ knowledge retrieval — ML concept | 366 | 1258 | +892 |
+| 7 | Docker guide retrieval | 968 | 1622 | +654 |
+| 8 | Token budget trimming (long conversation) | 6962 | 7636 | +674 |
+| 9 | Multi-fact profile update | 277 | 1282 | +1005 |
+| 10 | Cross-session episodic recall | 302 | 1216 | +914 |
 
 ---
 
@@ -283,7 +280,7 @@ Nếu bạn cần hỗ trợ cụ thể nào cho việc deploy project mới nà
 
 | Test Group | Scenarios | Passed | Rate |
 |------------|----------:|-------:|-----:|
-| profile_recall | 3 | 2 | 67% |
+| profile_recall | 3 | 3 | 100% |
 | conflict_update | 2 | 2 | 100% |
 | episodic_recall | 2 | 1 | 50% |
 | semantic_retrieval | 2 | 2 | 100% |
