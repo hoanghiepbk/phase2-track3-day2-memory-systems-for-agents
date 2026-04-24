@@ -1,0 +1,33 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ChromaDB local storage
+chroma_db/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data persistence (keep structure, ignore data)
+data/profiles/*.json
+data/episodes/*.jsonl
+!data/profiles/.gitkeep
+!data/episodes/.gitkeep
